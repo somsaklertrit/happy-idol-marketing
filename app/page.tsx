@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import HeroCarousel from "@/components/HeroCarousel";
-import BrandIntroSplash from "@/components/BrandIntroSplash";
-import MediaConnect from "@/components/MediaConnect";
-import PackagesPricing from "@/components/PackagesPricing";
-import { Icon } from "@/components/Icons";
-import { useLocale } from "@/components/LocaleProvider";
-import { collections, steps, faqs } from "@/data/site";
+import HeroCarousel from "../components/HeroCarousel";
+import BrandIntroSplash from "../components/BrandIntroSplash";
+import MediaConnect from "../components/MediaConnect";
+import PackagesPricing from "../components/PackagesPricing";
+import { Icon } from "../components/Icons";
+import { useLocale } from "../components/LocaleProvider";
+import { collections, steps, faqs } from "../data/site";
 
 const values = [["heart", "Made with Love"], ["star", "Premium Quality"], ["gift", "Perfect for Gifting"], ["book", "Timeless Keepsake"]] as const;
 const explore = [
