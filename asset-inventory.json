@@ -1,0 +1,356 @@
+[
+  {
+    "path": "Master Assets/00_HAPPY_IDOL_MASTER_ASSET_MAP.docx",
+    "bytes": 20553,
+    "sha256": "7bd4af0851a9efd2ce6a50f02dcfd4872110211775c6fb5f9684d3c54e480a55",
+    "mime_guess": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+    "path": "Master Assets/01_HAPPY_IDOL_WEBSITE_MASTER_BUILD_PROMPTHAPPY IDOL WEBSITE — MASTER BUILD PROMPT.docx",
+    "bytes": 21585,
+    "sha256": "67960108fc8d35e61a76b2c099490f0e832c227fdffc89a161b88b91606b4e06",
+    "mime_guess": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+    "path": "Master Assets/01_Hero/hero-01-walk-into-your-story.png",
+    "bytes": 2753051,
+    "sha256": "38a9a6a5601af6474c9a2a353024527053f0e74ecf1d5d6cb8fac1399b350da1",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/01_Hero/hero-02-every-family-story.png",
+    "bytes": 3241159,
+    "sha256": "167d36bb314e369327f33466c825632528960be6730292b8ea6fec3a3e4f5fce",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/01_Hero/hero-03-see-smile.png",
+    "bytes": 2881216,
+    "sha256": "a778eee46bec4a7ffd8899b8761d9f90d643bda0a46c183b32ae3f81f21add56",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/01_Hero/hero-04-made-for-them.png",
+    "bytes": 2568409,
+    "sha256": "993f53a356333567cc23a7d360da940d85322c99dd9e616e0779b4ab339f4f30",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/02_Sections/   section-01-turning-love.PNG",
+    "bytes": 3335689,
+    "sha256": "ab134c4cb91f8aa4dd59148ecd17c1791ac116e0eaa3d8c52a888f10e339cc50",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/02_Sections/section-02-ordinary-gifts.png",
+    "bytes": 3340934,
+    "sha256": "df0aa300f857b7ab559ed2599813284952042ca0d66e21140a88d377825f80a0",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-01-begood-big-dream.png",
+    "bytes": 2128822,
+    "sha256": "91ef28cb2391c86b852491039168a85b2afaf0a6d8cda0bcb56aa5555e49415f",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-02-adventure-worlds.png",
+    "bytes": 3936437,
+    "sha256": "b4fa44d9b1efe13b2934f08616560b966c6ef3e39e15070fa0c39fab9e3ae0c9",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-03-family-legacy.png",
+    "bytes": 2507572,
+    "sha256": "ea4fa5f864fd2b1327d69632009cd16d9eeb4b44db1e1d7164b78cd78da052a6",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-04-princess-shilynn.png",
+    "bytes": 3006678,
+    "sha256": "2c7dc51b708bf52f8fe389bafe6160c0e374f0f4ca3942244dd8a539a6d49cf3",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-05-memory-reels.png",
+    "bytes": 3959227,
+    "sha256": "7fd1f86b77e5f5df9bcc682ac1055be5e9e6dbfdd9de3d279a6b529020813d6c",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-06-family-memories.png",
+    "bytes": 3812214,
+    "sha256": "78ef84990e209651712c03018320d25dd79da7bfc2a92ac52700a1729c2c79a0",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-07-music-imagination.png",
+    "bytes": 3722300,
+    "sha256": "356728e65676b04ad19fde35b939e877e512a4a72637819261fbf84077ebd4e6",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/03_Collections/collection-08-signature-stories.png",
+    "bytes": 3824361,
+    "sha256": "cc1eb078c284e13c5d8014aafbc7a58619262dbd65b2155ba0fe6ae547903585",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/04_Founder_Family/founder-01-family-origin.png",
+    "bytes": 3547596,
+    "sha256": "179d27c259eca41a4b61ff3279e2fe907bae6b773626b5b27e8f021b6183e34d",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/04_Founder_Family/founder-02-family-portrait-outdoor.png",
+    "bytes": 2519476,
+    "sha256": "ac740e10157230c2c434b416c488f875012385acbe0879be04fdb1cf2fe5a387",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/04_Founder_Family/founder-03-founder-fullbody-beige-suit.png",
+    "bytes": 2244063,
+    "sha256": "e70ed712765b7578e317e8e856a9e8f1f8e8a4d6c620f21da7300f4ccf5ac8e8",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/04_Founder_Family/founder-04-founder-halfbody-studio.PNG",
+    "bytes": 2295381,
+    "sha256": "4c99246c339a3e8e4a765249ebf6dc2a71f73f8c6fcbac5fa1f96d47fce4e2fa",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-01-master-visual-direction.png",
+    "bytes": 2753051,
+    "sha256": "38a9a6a5601af6474c9a2a353024527053f0e74ecf1d5d6cb8fac1399b350da1",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-02-hero-style-reference.png",
+    "bytes": 2713435,
+    "sha256": "bdf118933d1ed6ea8743d42a8ac4616b329eeb75ca787810b1d8bfb883fd4f4c",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-03-color-palette.png",
+    "bytes": 1585044,
+    "sha256": "5dba0f415032404101fb5747085a782dbda2df74e7e6aa40757fb8bef088dd51",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-04-typography-style.png",
+    "bytes": 1750228,
+    "sha256": "9754e1244a731ca13c2a172c15df5ae350cd8c8de6e084cf822e72ad287e1b8c",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-05-golden-story-light.png",
+    "bytes": 2322779,
+    "sha256": "a1730ed3cb0ba0399c54b0bc260595b96b3f6103e070f1d7d0e3b2970c57bdc7",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-06-book-as-portal.png",
+    "bytes": 1881328,
+    "sha256": "27431572f0471185345beab6186ed8ff65941f7242d2444cf54b618835930ece",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/05_Brand/brand-07-ui-style-reference.png",
+    "bytes": 2020957,
+    "sha256": "6a8a9e58a5ff6acc772a5c3891aed8e6a83266dda7c237f16cd6f93eadfe4dd9",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/06_Logo/logo-01-circle-transparent.PNG",
+    "bytes": 2209665,
+    "sha256": "585de78aa99f1efbc74e1f7a3c6ea6900294c344e8dd44730bb5e09403c78602",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/06_Logo/logo-02-square-yellow-with-tagline.png",
+    "bytes": 1036095,
+    "sha256": "26744bd726dd22cae26bbeb8c7e8505e1b56381fdacf3795a3632555f2c74993",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/06_Logo/logo-03-square-yellow.png",
+    "bytes": 1796175,
+    "sha256": "2b9735d6a15dff39ccefa6a8da77dde0c6799543922cf4c71193e927d20d1d44",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/07_pakaging/packaging-01-premium-gift-box-fairy-light.png",
+    "bytes": 2050154,
+    "sha256": "1cbe5ea65af254ce36be0add8067fef9a1f2f819f3a282ce36d2f5dd818b7965",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/07_pakaging/packaging-02-yellow-gift-bag.png",
+    "bytes": 1740341,
+    "sha256": "bea19850d46d2b1c66bc6d03379162ce61b38742250ae973e6af3887350b6d77",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/07_pakaging/packaging-03-white-magnetic-box-rose-gold-logo.png",
+    "bytes": 1298271,
+    "sha256": "17db3485dd06fcc8c2cf075d5153963fc7e5b017bfc05333a2c8069d8df20cfa",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/07_pakaging/packaging-04-yellow-gift-box-set.png",
+    "bytes": 2908619,
+    "sha256": "8c3b5c11dab50dcde01f30efb5a16267c42ad30bf513cfc8816f6414d94731a3",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/07_pakaging/packaging-05-Luxury-Happy-IDOL-Gift-Set.png",
+    "bytes": 2195684,
+    "sha256": "4738f4da62905c951876c7c8ca23552b894d454dc17be03db97c5720819174e5",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-animal-pigy-closeup-v01.jpg",
+    "bytes": 287855,
+    "sha256": "a0ed421392abb651ab50266856e27490197de4a1585691915931e21732fcb02c",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-animal-rabbity-white-bunny-v01.jpg",
+    "bytes": 41530,
+    "sha256": "bf8bf0908d5bedc9ec649682fab9dba7cd5a439f401dde61fe6443793421b95c",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-animal-squirrelly-green-cap-v01.jpg",
+    "bytes": 455284,
+    "sha256": "9776c551efd8e2551e37c6946085248c1a89bb54f4ceb5a8111b0b1fd8220cfb",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-fantasy-berry-candyland-v01.jpg",
+    "bytes": 937900,
+    "sha256": "09469096269da321f6be136d029eeedf12f45aec37b9b674d8365fc7413378a5",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-fantasy-birdy-blue-crown-v01.jpg",
+    "bytes": 36135,
+    "sha256": "0c95b3c1e6662be3265fd175214d43bcb2388c1e2bc435461e3ab712e3713da2",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-fantasy-max-superhero-v01.jpg",
+    "bytes": 70343,
+    "sha256": "7d91f280e375d5cf79a73bb459a983f64521928e2b770fac883ee302b1932ab6",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-fantasy-pony-candyland-v01.jpg",
+    "bytes": 759744,
+    "sha256": "0106793ed04d7e224284d03277642d5fa488c5a0179e9a326ee892da802202eb",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-fantasy-princess-shilynn-castle-v01.jpeg",
+    "bytes": 505489,
+    "sha256": "68d4a0f0639b4258e50a248d7abfa3ed9baba7cb7ad85a71455a2fa16bdcae7b",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-begood-beige-cardigan-front-v01.jpg",
+    "bytes": 561695,
+    "sha256": "6d14acfef49f68ee03c2d31127e47d11397d273075b7f0f1d53dce73dfab1d5f",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-begood-family-formal-v01.png",
+    "bytes": 2698689,
+    "sha256": "63d9ee83dc84383d8809e583cba3c404b8ecf612852d21d7e20d203aae737428",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-begood-swimmer-v01.jpg",
+    "bytes": 106557,
+    "sha256": "5d03f7bb16f0179ac1de5445f848650b3c863790692d5824a4a4a88fac08c7db",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-berry-closeup-portrait-v01.png",
+    "bytes": 3150254,
+    "sha256": "e7c819be7c95aa818c0791bed16d13dd287829fa67a6384201a5b5c5a358c19f",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-berry-pink-portrait-v01.png",
+    "bytes": 3252700,
+    "sha256": "9624032a78d5fbd0119b673247ed992d4adda75e5cf22ec4eaebc54cb1a38010",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-berry-soft-pink-portrait-v01.png",
+    "bytes": 3559207,
+    "sha256": "b03c3df38d8654a09cf81a05de9a7168a4555872789920917be5dd8cead5dead",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-chinne-white-dress-fullbody-v01.png",
+    "bytes": 2035552,
+    "sha256": "8181292bf3dded7346ff049e2956cf3a40b81f723a2bb019beb993095989e453",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-founder-aui-beige-halfbody-v01.jpg",
+    "bytes": 51338,
+    "sha256": "db47b50eef26f51eae8929d7149f2c2dda955ad01032ca3b585afd9769954f73",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-founder-tee-black-jacket-portrait-v01.jpg",
+    "bytes": 41428,
+    "sha256": "e5be6100c8791e2bd528cf6d8e9d0ad1d4e2ceb0b271316e05ab45964d255eab",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-nicha-cherry-dress-fullbody-v01.png",
+    "bytes": 1237407,
+    "sha256": "bbe07319971c701dbf9369a858cfa0f32dc453f101e15c61901f8f79327b0b14",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-nita-braids-blue-overalls-v01.png",
+    "bytes": 1745370,
+    "sha256": "f03a66b7f8812a7a293668a51bacaadf352b31e3c67855028b391a92b3d20f8c",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-human-punnee-and-mum-floral-portrait-v01.jpg",
+    "bytes": 1886299,
+    "sha256": "634c46621e042ce3e34e703c182099cc891e78f516404ad8008e00d74e182bed",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-mascot-gosty-golden-glow-v01.png",
+    "bytes": 10444602,
+    "sha256": "2f1cc78c8b9e6cadaab415cf48e9fed132d300d37ca86c2df0d7e47dc181e369",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-mascot-nova-robot-front-v01.jpg",
+    "bytes": 49112,
+    "sha256": "63ea17ba281620df8dff55afacd89a37b7e25e7b4271d6ddf8e9eaefafcde28d",
+    "mime_guess": "image/jpeg"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-plush-dino-beige-front-v01.png",
+    "bytes": 1719624,
+    "sha256": "fd079cbba542202abc74764e0c2061c84afee33a8808aebc312befd0911a6eec",
+    "mime_guess": "image/png"
+  },
+  {
+    "path": "Master Assets/08_All Characters /char-plush-luna-white-bunny-headshot-v01.jpg",
+    "bytes": 403077,
+    "sha256": "210e83f9c4348c957727f5dc8abceab42ad7745595fdf8309767bd973e52f5a0",
+    "mime_guess": "image/jpeg"
+  }
+]

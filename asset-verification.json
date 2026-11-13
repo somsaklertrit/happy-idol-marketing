@@ -1,0 +1,45 @@
+{
+  "workspace": "/opt/data/happy-idol-marketing",
+  "source_root": "/opt/data/happy-idol-marketing/source-assets/Master Assets",
+  "public_root": "/opt/data/happy-idol-marketing/public/images",
+  "master_top_level_actual": [
+    "00_HAPPY_IDOL_MASTER_ASSET_MAP.docx",
+    "06_Logo",
+    "01_HAPPY_IDOL_WEBSITE_MASTER_BUILD_PROMPTHAPPY IDOL WEBSITE — MASTER BUILD PROMPT.docx",
+    "01_Hero",
+    "07_pakaging",
+    "04_Founder_Family",
+    "08_All Characters ",
+    "03_Collections",
+    "02_Sections",
+    "05_Brand"
+  ],
+  "canonical_structure_present": {
+    "00_HAPPY_IDOL_MASTER_ASSET_MAP": true,
+    "01_HAPPY_IDOL_WEBSITE_MASTER_BUILD_PROMPT": true,
+    "01_Hero": true,
+    "02_Sections": true,
+    "03_Collections": true,
+    "04_Founder_Family": true,
+    "05_Brand": true,
+    "06_Logo": true,
+    "07_packaging": true,
+    "08_All Characters": true
+  },
+  "zip": {
+    "path": "/opt/data/profiles/happyidol-line/cache/browser-use/workspace/20261021_082123_3227ca/downloads/Master Assets-20261021T091136Z-1-001.zip",
+    "exists": true,
+    "size_bytes": 122006464,
+    "test": "valid",
+    "bad_member": null,
+    "members": 59
+  },
+  "files_checked": 86,
+  "master_files": 59,
+  "public_files": 27,
+  "zero_byte_files": [],
+  "html_disguised_files": [],
+  "invalid_files": [],
+  "status": "pass",
+  "inventory": "/opt/data/happy-idol-marketing/asset-inventory.csv"
+}
