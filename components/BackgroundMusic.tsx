@@ -12,7 +12,7 @@ const SESSION_RESUME_PENDING_KEY = "happy-idol-resume-pending";
 const SESSION_POSITION_KEY = "happy-idol-music-position";
 const LEGACY_SOUND_KEY = "happy-idol-sound";
 const AUDIO_DEBUG = process.env.NEXT_PUBLIC_HAPPY_IDOL_AUDIO_DEBUG === "true";
-const FIRST_INTERACTION_EVENTS = ["pointerdown", "touchstart", "click", "keydown"] as const;
+const FIRST_INTERACTION_EVENTS = ["click", "touchend", "keydown"] as const;
 
 type FadeOptions = { pauseAfter?: boolean };
 type StartReason = "autoplay" | "interaction" | "resume" | "manual";
@@ -50,6 +50,7 @@ export default function BackgroundMusic() {
   const leftForExternalRef = useRef(false);
   const autoplayAttemptedRef = useRef(false);
   const playAttemptRef = useRef<Promise<boolean> | null>(null);
+  const playSequenceRef = useRef(0);
   const lastResumeAttemptAtRef = useRef(0);
   const removeInteractionListenersRef = useRef<(() => void) | null>(null);
   const [enabled, setEnabled] = useState(false);
@@ -102,6 +103,7 @@ export default function BackgroundMusic() {
   const pauseImmediately = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
+    playSequenceRef.current++;
     cancelFade();
     audio.volume = 0;
     audio.pause();
@@ -111,19 +113,20 @@ export default function BackgroundMusic() {
   const pauseWithFade = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    setPlaybackEnabled(false);
     fadeTo(0, FADE_MS, { pauseAfter: true });
-  }, [fadeTo, setPlaybackEnabled]);
+  }, [fadeTo]);
 
   const startPlayback = useCallback(async (reason: StartReason) => {
     const audio = audioRef.current;
     if (!audio || userMutedRef.current) return false;
     if (!audio.paused) {
+      fadeTo(TARGET_VOLUME);
       setPlaybackEnabled(true);
       debugAudioState("play-success");
       return true;
     }
-    if (playAttemptRef.current) return playAttemptRef.current;
+    if (playAttemptRef.current && (reason === "autoplay" || reason === "resume")) return playAttemptRef.current;
+    const sequence = ++playSequenceRef.current;
 
     const attempt = (async () => {
       cancelFade();
@@ -131,12 +134,15 @@ export default function BackgroundMusic() {
       audio.volume = reason === "autoplay" ? 0.01 : 0;
       try {
         await audio.play();
+        if (sequence !== playSequenceRef.current || userMutedRef.current) return false;
         lastTimeRef.current = audio.currentTime;
         setPlaybackEnabled(true);
         fadeTo(TARGET_VOLUME);
         debugAudioState("play-success");
         return true;
-      } catch {
+      } catch (error) {
+        console.log("Audio Error:", error);
+        if (sequence !== playSequenceRef.current) return false;
         audio.pause();
         setPlaybackEnabled(false);
         debugAudioState("play-failed");
@@ -146,7 +152,7 @@ export default function BackgroundMusic() {
 
     playAttemptRef.current = attempt;
     const started = await attempt;
-    playAttemptRef.current = null;
+    if (playAttemptRef.current === attempt) playAttemptRef.current = null;
     return started;
   }, [cancelFade, debugAudioState, fadeTo, setPlaybackEnabled]);
 
@@ -214,9 +220,11 @@ export default function BackgroundMusic() {
         clearFirstInteractionFallback();
       });
     };
-    for (const eventName of FIRST_INTERACTION_EVENTS) document.addEventListener(eventName, onFirstInteraction, true);
+    for (const eventName of FIRST_INTERACTION_EVENTS) {
+      document.body.addEventListener(eventName, onFirstInteraction, { once: true, capture: true });
+    }
     removeInteractionListenersRef.current = () => {
-      for (const eventName of FIRST_INTERACTION_EVENTS) document.removeEventListener(eventName, onFirstInteraction, true);
+      for (const eventName of FIRST_INTERACTION_EVENTS) document.body.removeEventListener(eventName, onFirstInteraction, true);
     };
   }, [clearFirstInteractionFallback, restorePlaybackPosition, setResumeState, startPlayback]);
 
@@ -237,13 +245,16 @@ export default function BackgroundMusic() {
   }, [armFirstInteractionFallback, clearFirstInteractionFallback, restorePlaybackPosition, setResumeState, startPlayback]);
 
   const handleToggle = useCallback(() => {
-    if (enabledRef.current) {
+    const audio = audioRef.current;
+    if (!audio) return;
+    clearFirstInteractionFallback();
+    if (!audio.paused) {
       userMutedRef.current = true;
       writeSessionBoolean(SESSION_USER_MUTED_KEY, true);
       try { sessionStorage.setItem(LEGACY_SOUND_KEY, "off"); } catch { /* Storage can be unavailable. */ }
       setResumeState(false, false);
       clearFirstInteractionFallback();
-      pauseWithFade();
+      pauseImmediately();
       return;
     }
 
@@ -252,9 +263,14 @@ export default function BackgroundMusic() {
     try { sessionStorage.removeItem(LEGACY_SOUND_KEY); } catch { /* Storage can be unavailable. */ }
     setResumeState(false, false);
     void startPlayback("manual").then((started) => {
-      if (!started) armFirstInteractionFallback();
+      if (started) clearFirstInteractionFallback();
     });
-  }, [armFirstInteractionFallback, clearFirstInteractionFallback, pauseWithFade, setResumeState, startPlayback]);
+  }, [clearFirstInteractionFallback, pauseImmediately, setResumeState, startPlayback]);
+
+  const syncPlaybackState = useCallback(() => {
+    const audio = audioRef.current;
+    setPlaybackEnabled(!!audio && !audio.paused && !audio.ended && !audio.error);
+  }, [setPlaybackEnabled]);
 
   const handleTimeUpdate = useCallback(() => {
     const audio = audioRef.current;
@@ -281,7 +297,10 @@ export default function BackgroundMusic() {
       clearFirstInteractionFallback();
       return;
     }
-    if (autoplayAttemptedRef.current) return;
+    if (autoplayAttemptedRef.current) {
+      armFirstInteractionFallback();
+      return clearFirstInteractionFallback;
+    }
     autoplayAttemptedRef.current = true;
 
     void (async () => {
@@ -353,7 +372,7 @@ export default function BackgroundMusic() {
   }, [armFirstInteractionFallback, cancelFade, clearFirstInteractionFallback, debugAudioState, markTemporaryPause, pauseImmediately, pauseWithFade, resumePendingPlayback]);
 
   return <div className="background-music" data-active={enabled ? "true" : "false"}>
-    <audio ref={audioRef} src="/audio/family-motif.mp3" preload="auto" loop onTimeUpdate={handleTimeUpdate} aria-label={t("Background music")}/>
+    <audio ref={audioRef} src="/audio/family-motif.mp3" preload="auto" loop playsInline onTimeUpdate={handleTimeUpdate} onPlay={syncPlaybackState} onPlaying={syncPlaybackState} onPause={syncPlaybackState} onEnded={syncPlaybackState} onError={syncPlaybackState} onEmptied={syncPlaybackState} aria-label={t("Background music")}/>
     <button type="button" className="sound-control" aria-pressed={enabled} aria-label={t(enabled ? "Turn background music off" : "Turn background music on")} onClick={handleToggle}>
       <span aria-hidden="true">♪</span> {t(enabled ? "Sound On" : "Sound Off")}
     </button>
