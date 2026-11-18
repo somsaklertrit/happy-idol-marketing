@@ -12,7 +12,7 @@ const SESSION_RESUME_PENDING_KEY = "happy-idol-resume-pending";
 const SESSION_POSITION_KEY = "happy-idol-music-position";
 const LEGACY_SOUND_KEY = "happy-idol-sound";
 const AUDIO_DEBUG = process.env.NEXT_PUBLIC_HAPPY_IDOL_AUDIO_DEBUG === "true";
-const FIRST_INTERACTION_EVENTS = ["click", "touchend", "keydown"] as const;
+const FIRST_INTERACTION_EVENTS = ["pointerdown", "pointerup", "touchend", "click", "keydown", "wheel"] as const;
 
 type FadeOptions = { pauseAfter?: boolean };
 type StartReason = "autoplay" | "interaction" | "resume" | "manual";
@@ -221,7 +221,7 @@ export default function BackgroundMusic() {
       });
     };
     for (const eventName of FIRST_INTERACTION_EVENTS) {
-      document.body.addEventListener(eventName, onFirstInteraction, { once: true, capture: true });
+      document.body.addEventListener(eventName, onFirstInteraction, { capture: true, passive: true });
     }
     removeInteractionListenersRef.current = () => {
       for (const eventName of FIRST_INTERACTION_EVENTS) document.body.removeEventListener(eventName, onFirstInteraction, true);
@@ -287,31 +287,30 @@ export default function BackgroundMusic() {
   }, [fadeTo]);
 
   useEffect(() => {
-    const legacyMuted = (() => { try { return sessionStorage.getItem(LEGACY_SOUND_KEY) === "off"; } catch { return false; } })();
-    userMutedRef.current = readSessionBoolean(SESSION_USER_MUTED_KEY) || legacyMuted;
-    musicWasPlayingBeforeExternalRef.current = readSessionBoolean(SESSION_WAS_PLAYING_KEY);
-    resumePendingRef.current = readSessionBoolean(SESSION_RESUME_PENDING_KEY);
-
-    if (userMutedRef.current) {
-      setPlaybackEnabled(false);
-      clearFirstInteractionFallback();
-      return;
-    }
     if (autoplayAttemptedRef.current) {
       armFirstInteractionFallback();
       return clearFirstInteractionFallback;
     }
     autoplayAttemptedRef.current = true;
+    // A new page visit tries autoplay again. Manual OFF applies to this visit.
+    userMutedRef.current = false;
+    writeSessionBoolean(SESSION_USER_MUTED_KEY, false);
+    try { sessionStorage.removeItem(LEGACY_SOUND_KEY); } catch { /* Storage can be unavailable. */ }
+    musicWasPlayingBeforeExternalRef.current = readSessionBoolean(SESSION_WAS_PLAYING_KEY);
+    resumePendingRef.current = readSessionBoolean(SESSION_RESUME_PENDING_KEY);
+    armFirstInteractionFallback();
 
     void (async () => {
       const returning = resumePendingRef.current && musicWasPlayingBeforeExternalRef.current;
       if (returning) restorePlaybackPosition();
       const started = await startPlayback(returning ? "resume" : "autoplay");
-      if (started) setResumeState(false, false);
-      else armFirstInteractionFallback();
+      if (started) {
+        setResumeState(false, false);
+        clearFirstInteractionFallback();
+      }
     })();
     return clearFirstInteractionFallback;
-  }, [armFirstInteractionFallback, clearFirstInteractionFallback, restorePlaybackPosition, setPlaybackEnabled, setResumeState, startPlayback]);
+  }, [armFirstInteractionFallback, clearFirstInteractionFallback, restorePlaybackPosition, setResumeState, startPlayback]);
 
   useEffect(() => {
     const onVisibilityChange = () => {
