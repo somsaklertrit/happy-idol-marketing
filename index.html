@@ -1145,7 +1145,7 @@ function handleSubmitFailure(err){
   setSubmitting(false,ui('ส่งข้อมูลไม่สำเร็จ — กรุณาลองอีกครั้ง','Submission failed — please try again.'));
   alert(ui('ส่งข้อมูลไม่สำเร็จครับ\n','Submission failed.\n')+(err?.message||err||ui('กรุณาลองใหม่อีกครั้ง','Please try again.')));
 }
-const SCRIPT_URL ="https://script.google.com/macros/s/AKfycbxGN_bcw8FYe7VKDWY2V8vT72CprL_YVXV0t-mqLRnWKFN2L1ZmDH_0kJ_TyE8Jovz9/exec";
+const SCRIPT_URL ="https://script.google.com/macros/s/AKfycbyhE9hI-TOg-ls0ZDyihsE75ib1brrJWk4qBkdOhUOYceInWLW8QLwuu3pHSjQj5DeQ/exec";
 next.onclick = async () => {
   if (next.disabled) return;
   if (cur < steps.length - 1) {
