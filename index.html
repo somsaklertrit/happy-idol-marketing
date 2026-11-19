@@ -439,7 +439,7 @@ body{min-height:100vh;min-height:100dvh}
     gap: 10px;
   }
 </style>
-</head>
+<style>#crmDetails input,#crmDetails textarea,#crmDetails select{width:100%;max-width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line,#e8e2cf);border-radius:12px;background:#fff;color:inherit;font:inherit;font-size:16px}#crmDetails{margin:24px 0}#crmDetails label{display:block;margin-bottom:8px}</style></head>
 <body>
 
 <section id="introScreen" class="intro-screen" aria-label="ยินดีต้อนรับสู่ Happy Idol" data-th-aria-label="ยินดีต้อนรับสู่ Happy Idol">
@@ -692,6 +692,27 @@ body{min-height:100vh;min-height:100dvh}
 <section class="step"><div class="hi-step-banner hi-world" aria-hidden="true"><img decoding="async" src="data:image/webp;base64,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" alt=""><div><b>ตรวจอีกครั้งก่อนส่ง</b><span>Happy Idol จะใช้ข้อมูลนี้เป็น Story Brief เพื่อสร้างผลงานอย่างระมัดระวัง</span></div></div>
 <h2>9. ตรวจสอบเรื่องของคุณ ✨</h2><div class="help">ตรวจสอบข้อมูลก่อนส่งให้ Happy Idol คุณสามารถกด “แก้ไข” เพื่อกลับไปยังส่วนนั้นได้ทันที</div>
 <div class="privacy-box"><div class="privacy-title">🔒 เราดูแลเรื่องราวของคุณด้วยความระมัดระวัง</div><div class="help" style="margin:0">ข้อมูล เรื่องราว และรูปภาพจะใช้เพื่อสร้างผลงานตามคำสั่งซื้อของคุณ และจะไม่เผยแพร่หรือนำไปใช้เพื่อการตลาดโดยไม่ได้รับความยินยอมแยกต่างหาก</div><a class="privacy-link" href="https://94bf91c8.happy-idol-live-pilot-staging.pages.dev/#privacy">อ่านนโยบายความเป็นส่วนตัว ›</a></div>
+<div id="crmDetails">
+<h3>ข้อมูลเจ้าของเรื่อง ผู้ปกครอง และการจัดส่ง</h3><p class="help">กรอกข้อมูลจริงสำหรับบันทึกงานและจัดส่ง ช่องที่มี * จำเป็นต้องกรอก ชื่อเจ้าของเรื่องและข้อความถึงเขาจะใช้จากขั้นตอนก่อนหน้า</p>
+<div class="q"><label class="qt" for="crm-childEnglishName">ชื่อภาษาอังกฤษ</label><input id="crm-childEnglishName" name="childEnglishName" type="text"  ></div>
+<div class="q"><label class="qt" for="crm-childFullName">ชื่อ–นามสกุลเจ้าของเรื่อง</label><input id="crm-childFullName" name="childFullName" type="text"  ></div>
+<div class="q"><label class="qt" for="crm-birthday">วันเกิดเจ้าของเรื่อง *</label><input id="crm-birthday" name="birthday" type="date" required ></div>
+<div class="q"><label class="qt" for="crm-pronouns">คำเรียกแทนเจ้าของเรื่อง</label><input id="crm-pronouns" name="pronouns" type="text"  ></div>
+<div class="q"><label class="qt" for="crm-storyGoals">เป้าหมายของหนังสือ (หนึ่งเป้าหมายต่อบรรทัด) *</label><textarea id="crm-storyGoals" name="storyGoals" required></textarea></div>
+<div class="q"><label class="qt" for="crm-storyWorld">โลกของเรื่อง (หนึ่งรายการต่อบรรทัด)</label><textarea id="crm-storyWorld" name="storyWorld" ></textarea></div>
+<div class="q"><label class="qt" for="crm-illustrationStyle">สไตล์ภาพ</label><select id="crm-illustrationStyle" name="illustrationStyle"><option value="">เลือกสไตล์ภาพ</option><option>3D animated cinematic</option><option>Watercolor storybook</option><option>Classic illustrated book</option><option>Modern colorful cartoon</option><option>Soft realistic fantasy</option></select></div>
+<div class="q"><label class="qt" for="crm-favoriteOutfit">ชุดโปรด</label><input id="crm-favoriteOutfit" name="favoriteOutfit" type="text"  ></div>
+<div class="q"><label class="qt" for="crm-specialDetails">รายละเอียดพิเศษเพิ่มเติมเกี่ยวกับเจ้าของเรื่อง</label><textarea id="crm-specialDetails" name="specialDetails" ></textarea></div>
+<div class="q"><label class="qt" for="crm-parentName">ชื่อผู้ปกครอง / ผู้สั่งทำ *</label><input id="crm-parentName" name="parentName" type="text" required autocomplete="name"></div>
+<div class="q"><label class="qt" for="crm-parentEmail">อีเมล *</label><input id="crm-parentEmail" name="parentEmail" type="email" required autocomplete="email"></div>
+<div class="q"><label class="qt" for="crm-parentPhone">เบอร์โทรศัพท์ *</label><input id="crm-parentPhone" name="parentPhone" type="tel" required autocomplete="tel"></div>
+<div class="q"><label class="qt" for="crm-lineId">LINE ID</label><input id="crm-lineId" name="lineId" type="text"  ></div>
+<div class="q"><label class="qt" for="crm-deliveryName">ชื่อผู้รับ *</label><input id="crm-deliveryName" name="deliveryName" type="text" required autocomplete="shipping name"></div>
+<div class="q"><label class="qt" for="crm-deliveryPhone">เบอร์ผู้รับ *</label><input id="crm-deliveryPhone" name="deliveryPhone" type="tel" required autocomplete="shipping tel"></div>
+<div class="q"><label class="qt" for="crm-deliveryAddress">ที่อยู่จัดส่ง *</label><textarea id="crm-deliveryAddress" name="deliveryAddress" required></textarea></div>
+<div class="q"><label class="qt" for="crm-province">จังหวัด *</label><input id="crm-province" name="province" type="text" required autocomplete="shipping address-level1"></div>
+<div class="q"><label class="qt" for="crm-postalCode">รหัสไปรษณีย์ *</label><input id="crm-postalCode" name="postalCode" type="text" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="shipping postal-code"></div>
+</div>
 <div id="summary" class="review-list"></div>
 <div class="q"><div class="qt">มีอะไรอยากบอก Happy Idol เพิ่มเติมไหม?</div><textarea name="extra" placeholder="ไม่บังคับ — พิมพ์สิ่งที่อยากให้เรารู้เพิ่มเติม" data-th-placeholder="ไม่บังคับ — พิมพ์สิ่งที่อยากให้เรารู้เพิ่มเติม"></textarea></div>
 <div id="privacy" class="privacy-box">
@@ -1009,6 +1030,7 @@ const sections=[
  {step:4,icon:'🎁',title:'5. เหตุผลและความทรงจำ',chips:['occasion','memory_type'],fields:[['โอกาสอื่น','occasion_other'],['เรื่องที่ไม่อยากลืม','memory_story']]},
  {step:5,icon:'🌱',title:'6. สิ่งที่อยากให้เรื่องช่วยเขา',chips:['growth'],fields:[['เพิ่มเติม','growth_other'],['บริบทนิสัย/ความกลัว','context']]},
  {step:6,icon:'🚀',title:'7. ความฝันและความรู้สึก',chips:['emotion'],fields:[['ความฝัน','dream'],['ข้อความถึงเขา','message']]},
+ {step:8,icon:'📦',title:'ข้อมูลผู้ปกครองและการจัดส่ง',fields:[['วันเกิด','birthday'],['ชื่อภาษาอังกฤษ','childEnglishName'],['ชื่อ–นามสกุล','childFullName'],['คำเรียก','pronouns'],['เป้าหมาย','storyGoals'],['โลกของเรื่อง','storyWorld'],['สไตล์ภาพ','illustrationStyle'],['ชุดโปรด','favoriteOutfit'],['รายละเอียดพิเศษ','specialDetails'],['ผู้ปกครอง / ผู้สั่งทำ','parentName'],['อีเมล','parentEmail'],['โทรศัพท์','parentPhone'],['LINE ID','lineId'],['ผู้รับ','deliveryName'],['โทรศัพท์ผู้รับ','deliveryPhone'],['ที่อยู่','deliveryAddress'],['จังหวัด','province'],['รหัสไปรษณีย์','postalCode']]},
  {step:7,icon:'📷',title:'8. รูปแบบเรื่องและรูปภาพ',chips:['story_journey','adult_direction','life_vision_area'],fields:[['Story Type','story_type'],['Story Theme','story_theme'],['Future Life Vision','future_vision'],['Mood & Tone','tone'],['ภาษา','language'],['สิ่งที่ไม่ต้องการ','avoid']],photo:true}
 ];
 function vals(name){return [...form.querySelectorAll(`[name="${name}"]:checked`)].map(x=>x.value)}
@@ -1102,27 +1124,71 @@ function getSubmissionUiLanguage() {
   return navigator.language?.toLowerCase().split('-')[0] === 'en' ? 'en' : 'th';
 }
 
+function crmLines(name) {
+  return val(name).split(/\r?\n/).map(text => text.trim()).filter(Boolean);
+}
+function validateCrmFields() {
+  const requiredOld = [['recipient_name', 0, 'กรุณากรอกชื่อเล่น / ชื่อเจ้าของเรื่อง'], ['message', 6, 'กรุณากรอกข้อความจากหัวใจถึงเจ้าของเรื่อง']];
+  for (const [name, step, message] of requiredOld) {
+    if (!val(name)) {
+      goStep(step);
+      const el = form.elements[name];
+      el.setCustomValidity(message); el.reportValidity();
+      el.addEventListener('input', () => el.setCustomValidity(''), {once:true});
+      return false;
+    }
+  }
+  for (const el of document.querySelectorAll('#crmDetails input, #crmDetails textarea, #crmDetails select')) {
+    el.setCustomValidity(el.required && !el.value.trim() ? 'กรุณากรอกข้อมูลช่องนี้' : '');
+    if (el.name === 'birthday' && el.value && el.value > [new Date().getFullYear(), String(new Date().getMonth()+1).padStart(2, '0'), String(new Date().getDate()).padStart(2, '0')].join('-')) {
+      el.setCustomValidity('วันเกิดต้องไม่อยู่ในอนาคต');
+    }
+    if (!el.checkValidity()) {
+      goStep(steps.length - 1); el.reportValidity();
+      el.addEventListener('input', () => el.setCustomValidity(''), {once:true});
+      return false;
+    }
+  }
+  return true;
+}
 async function buildSubmissionPayload() {
   const files = [...(form.elements.photos?.files || [])];
-  if (files.length > 8) {
-    throw new Error(ui(
-      'แนบรูปได้สูงสุด 8 รูปใน Live Pilot นี้ครับ',
-      'You can attach up to 8 photos in this Live Pilot.'
-    ));
-  }
-
+  if (files.length > 8) throw new Error(ui('แนบรูปได้สูงสุด 8 รูปครับ', 'Attach up to 8 photos.'));
+  const birthday = val('birthday');
+  const birth = new Date(birthday + 'T00:00:00');
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  if (today.getMonth() < birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())) age--;
   summary();
+  const fields = serialize();
   const payload = {
     schemaVersion: 'StorySubmissionV1',
-    requestId: generateRequestId(),
-    uiLanguage: getSubmissionUiLanguage(),
+    requestId: generateRequestId(), uiLanguage: getSubmissionUiLanguage(),
     submittedAt: new Date().toISOString(),
-    summaryText: document.getElementById('summary').innerText,
-    fields: serialize(),
-    photos: []
+    parentName: val('parentName'), parentEmail: val('parentEmail'), parentPhone: val('parentPhone'), lineId: val('lineId'),
+    childNickname: val('recipient_name'), childEnglishName: val('childEnglishName'), childFullName: val('childFullName'),
+    birthday, age: Number.isFinite(age) ? String(age) : '', pronouns: val('pronouns'),
+    personality: [...vals('personality'), ...[val('personality_other')].filter(Boolean)],
+    interests: [...vals('likes'), ...[val('likes_other')].filter(Boolean)],
+    dream: val('dream'), storyGoals: crmLines('storyGoals'), storyWorld: crmLines('storyWorld'),
+    illustrationStyle: val('illustrationStyle'),
+    favoriteColors: [...vals('favorite_colors'), ...[val('favorite_color_other')].filter(Boolean)].join(', '),
+    favoriteOutfit: val('favoriteOutfit'),
+    // Code.gs stores this field in Sheets; retain every original Portal answer here too.
+    specialDetails: [val('specialDetails'), 'Story Portal — ข้อมูลต้นฉบับ (JSON)', JSON.stringify(fields)].filter(Boolean).join('\n\n'),
+    parentLetter: val('message'),
+    deliveryName: val('deliveryName'), deliveryPhone: val('deliveryPhone'), deliveryAddress: val('deliveryAddress'),
+    province: val('province'), postalCode: val('postalCode'),
+    consent: form.elements.consent_production.checked,
+    summaryText: document.getElementById('summary').innerText, fields, photos: []
   };
+  if (payload.specialDetails.length > 45000) throw new Error(ui('รายละเอียดรวมยาวเกินไป กรุณาย่อข้อความก่อนส่ง', 'Please shorten your answers before submitting.'));
   for (const file of files) {
-    payload.photos.push(await compressImage(file));
+    const photo = await compressImage(file);
+    if (!['image/jpeg','image/png','image/webp','image/heic'].includes(photo.type) || !photo.base64 || photo.base64.length > 13981016) {
+      throw new Error(ui('รูปไม่รองรับหรือมีขนาดเกิน 10 MB กรุณาใช้ JPG, PNG, WebP หรือ HEIC', 'Unsupported image or image exceeds 10 MB. Use JPG, PNG, WebP or HEIC.'));
+    }
+    payload.photos.push({name: photo.name, mimeType: photo.type, data: photo.base64});
   }
   return payload;
 }
@@ -1132,6 +1198,71 @@ function setSubmitting(on,msg){
   next.textContent=on?ui('กำลังส่ง...','Submitting...'):ui('ส่งเรื่องของฉันให้ Happy Idol 💛','Submit my story to Happy Idol 💛');
   const el=document.getElementById('submitStatus'); if(el&&msg)el.textContent=msg;
 }
+async function forwardSavedStoryNotification(result) {
+  const receipt = result?.notification?.receipt;
+  if (!receipt) return;
+  const url = new URL(receipt.endpoint);
+  if (url.protocol !== 'https:' || url.username || url.password ||
+      url.pathname !== '/webhook/story-update' || url.search || url.hash ||
+      typeof receipt.payloadJson !== 'string' || receipt.payloadJson.length > 16000 ||
+      !/^sha256=[0-9a-f]{64}$/i.test(receipt.signature || '') ||
+      !/^\d{10}$/.test(receipt.timestamp || '')) {
+    throw new Error('Invalid notification receipt');
+  }
+  const event = JSON.parse(receipt.payloadJson);
+  if (event.schemaVersion !== 'StoryNotificationV1' || event.storageStatus !== 'complete' ||
+      event.event !== 'story.submission.saved' || event.submissionId !== result.submissionId ||
+      !Number.isInteger(event.savedPhotoCount) || event.savedPhotoCount < 0) {
+    throw new Error('Notification receipt does not match saved submission');
+  }
+  const response = await fetch(url.href, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Story-Timestamp': receipt.timestamp,
+      'X-Story-Signature': receipt.signature
+    },
+    body: receipt.payloadJson,
+    credentials: 'omit',
+    redirect: 'error',
+    keepalive: true,
+    signal: AbortSignal.timeout(8000)
+  });
+  if (response.status !== 202) throw new Error('Notification delivery deferred');
+  const accepted = await response.json();
+  if (accepted.accepted !== true || accepted.submissionId !== result.submissionId) {
+    throw new Error('Notification receipt was not acknowledged');
+  }
+}
+
+function confirmedSubmissionResult(data) {
+  const readError = value => {
+    if (typeof value === 'string') return value.trim();
+    return value && typeof value.message === 'string' ? value.message.trim() : '';
+  };
+  const detail = value => readError(value?.message) || readError(value?.error);
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    throw new Error(ui('ระบบส่งผลตอบกลับที่ไม่ถูกต้อง', 'The server returned an invalid response.'));
+  }
+  if (data.success === false || data.ok === false) {
+    throw new Error(detail(data) || ui('ระบบไม่ยืนยันการรับข้อมูล', 'The server did not confirm receipt.'));
+  }
+  const result = data.result ?? data.data ?? data;
+  if (!result || typeof result !== 'object' || Array.isArray(result)) {
+    throw new Error(ui('ระบบไม่ส่งรายละเอียดผลการบันทึก', 'The server did not return the saved submission details.'));
+  }
+  if (result.success === false || result.ok === false) {
+    throw new Error(detail(result) || detail(data) || ui('ระบบไม่ยืนยันการรับข้อมูล', 'The server did not confirm receipt.'));
+  }
+  const confirmed = data.success === true || data.ok === true || result.success === true || result.ok === true;
+  const id = result.submissionId || result.storyId;
+  if (!confirmed || typeof id !== 'string' || !id.trim()) {
+    throw new Error(detail(data) || detail(result) ||
+      ui('ระบบยังไม่ยืนยันรหัสงานที่บันทึก กรุณาให้ทีมงานตรวจสอบก่อนส่งซ้ำ', 'The server did not confirm a saved job ID. Please contact the team before resubmitting.'));
+  }
+  return { ...result, submissionId: id.trim() };
+}
+
 function handleSubmitSuccess(res){
   document.getElementById('submitStatus').textContent = ui('ส่งข้อมูลสำเร็จแล้ว','Submission successful');
   next.textContent = ui('ส่งข้อมูลสำเร็จแล้ว','Submission successful');
@@ -1161,18 +1292,24 @@ next.onclick = async () => {
     alert(ui('กรุณาเลือกว่าจะอนุญาตหรือไม่อนุญาตการใช้ผลงานเพื่อการประชาสัมพันธ์ครับ', 'Please choose whether you allow the work to be used for promotional purposes.'));
     return;
   }
+  if (!validateCrmFields()) return;
   setSubmitting(true, ui('กำลังส่งข้อมูลและรูปภาพไปยัง Happy Idol...', 'Submitting your information and photos to Happy Idol...'));
   try {
     const payload = await buildSubmissionPayload();
     const response = await fetch(SCRIPT_URL, {
       method: 'POST',
       body: JSON.stringify(payload),
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      redirect: 'follow',
+      credentials: 'omit'
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    if (data?.success !== true) throw new Error(data?.error || ui('ระบบไม่ยืนยันการรับข้อมูล', 'The server did not confirm receipt.'));
-    handleSubmitSuccess(data.result);
+    const result = confirmedSubmissionResult(data);
+    handleSubmitSuccess(result);
+    void forwardSavedStoryNotification(result).catch(() => {
+      console.info('Story saved. Notification delivery will continue from the server outbox.');
+    });
   } catch (error) {
     handleSubmitFailure(error);
   }
